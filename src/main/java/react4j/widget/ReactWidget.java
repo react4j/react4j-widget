@@ -20,19 +20,19 @@ public class ReactWidget
    */
   private final Element _element;
   /**
-   * The react widget to render.
+   * The react element to render.
    */
-  private final ReactNode _reactElement;
+  private final ReactNode _node;
 
   /**
    * Create the widget.
    *
-   * @param reactElement the react element to render.
+   * @param node the react element to render.
    */
-  public ReactWidget( @Nonnull final ReactNode reactElement )
+  public ReactWidget( @Nonnull final ReactNode node )
   {
     _element = Document.get().createDivElement();
-    _reactElement = Objects.requireNonNull( reactElement );
+    _node = Objects.requireNonNull( node );
     setElement( _element );
   }
 
@@ -43,7 +43,7 @@ public class ReactWidget
   public void onAttach()
   {
     super.onAttach();
-    ReactDOM.render( _reactElement, Js.uncheckedCast( _element ) );
+    ReactDOM.render( _node, Js.uncheckedCast( _element ) );
 
   }
 
