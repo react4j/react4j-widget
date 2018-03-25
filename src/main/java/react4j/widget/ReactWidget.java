@@ -6,8 +6,11 @@ import com.google.gwt.user.client.ui.Widget;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import jsinterop.base.Js;
+import org.realityforge.braincheck.BrainCheckConfig;
+import react4j.core.React;
 import react4j.core.ReactNode;
 import react4j.dom.ReactDOM;
+import static org.realityforge.braincheck.Guards.apiInvariant;
 
 /**
  * A GWT widget that renders a React4j element.
@@ -33,6 +36,11 @@ public class ReactWidget
   {
     _element = Document.get().createDivElement();
     _node = Objects.requireNonNull( node );
+    if ( BrainCheckConfig.checkApiInvariants() )
+    {
+      apiInvariant( () -> React.isValidElement( node ),
+                    () -> "A ReactNode that is not a valid element has been incorrectly passed to ReactWidget constructor" );
+    }
     setElement( _element );
   }
 
