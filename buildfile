@@ -43,7 +43,7 @@ define 'react4j-widget' do
           :windowtitle => 'React4j Widget API Documentation',
           :linksource => true,
           :timestamp => false,
-          :link => %w(https://react4j.github.io/react4j https://arez.github.io/api https://docs.oracle.com/javase/8/docs/api http://www.gwtproject.org/javadoc/latest/)
+          :link => %w(https://react4j.github.io/api https://arez.github.io/api https://docs.oracle.com/javase/8/docs/api http://www.gwtproject.org/javadoc/latest/)
     )
 
   iml.excluded_directories << project._('tmp')
