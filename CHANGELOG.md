@@ -2,6 +2,8 @@
 
 ### Unreleased
 
+Update the 'org.realityforge.react4j' dependencies to version '0.60'
+
 ### [v1.06](https://github.com/react4j/react4j-widget/tree/v1.06) (2018-04-04)
 [Full Changelog](https://github.com/react4j/react4j-widget/compare/v1.05...v1.06)
 
