@@ -1,6 +1,7 @@
 # Change Log
 
-### Unreleased
+### [v1.08](https://github.com/react4j/react4j-widget/tree/v1.08) (2018-04-06)
+[Full Changelog](https://github.com/react4j/react4j-widget/compare/v1.07...v1.08)
 
 Update the 'org.realityforge.react4j' dependencies to version '0.61'
 
