@@ -2,6 +2,8 @@
 
 ### Unreleased
 
+* Update the 'org.realityforge.react4j' dependencies to version '0.71'
+
 * Fix bug that resulted in inclusion in the package of the gwt compile output.
 
 ### [v1.17](https://github.com/react4j/react4j-widget/tree/v1.17) (2018-05-20)
