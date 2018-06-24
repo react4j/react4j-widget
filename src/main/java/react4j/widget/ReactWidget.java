@@ -7,8 +7,8 @@ import java.util.Objects;
 import javax.annotation.Nonnull;
 import jsinterop.base.Js;
 import org.realityforge.braincheck.BrainCheckConfig;
-import react4j.core.React;
-import react4j.core.ReactNode;
+import react4j.React;
+import react4j.ReactNode;
 import react4j.dom.ReactDOM;
 import static org.realityforge.braincheck.Guards.apiInvariant;
 
