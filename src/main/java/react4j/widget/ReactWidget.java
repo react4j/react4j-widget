@@ -10,7 +10,7 @@ import org.realityforge.braincheck.BrainCheckConfig;
 import react4j.React;
 import react4j.ReactNode;
 import react4j.dom.ReactDOM;
-import static org.realityforge.braincheck.Guards.apiInvariant;
+import static org.realityforge.braincheck.Guards.*;
 
 /**
  * A GWT widget that renders a React4j element.
