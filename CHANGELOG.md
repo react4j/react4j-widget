@@ -2,6 +2,8 @@
 
 ### Unreleased
 
+* Update the 'org.realityforge.react4j' dependencies to version '0.89'
+
 ### [v1.32](https://github.com/react4j/react4j-widget/tree/v1.32) (2018-07-25)
 [Full Changelog](https://github.com/react4j/react4j-widget/compare/v1.31...v1.32)
 
