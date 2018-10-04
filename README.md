@@ -15,7 +15,7 @@ The simplest way to use component;
 <dependency>
    <groupId>org.realityforge.react4j.widget</groupId>
    <artifactId>react4j-widget</artifactId>
-   <version>1.41</version>
+   <version>1.42</version>
 </dependency>
 ```
 
