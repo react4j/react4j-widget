@@ -1,5 +1,7 @@
 # Change Log
 
+### Unreleased
+
 ### [v1.50](https://github.com/react4j/react4j-widget/tree/v1.50) (2018-11-08)
 [Full Changelog](https://github.com/react4j/react4j-widget/compare/v1.49...v1.50)
 
