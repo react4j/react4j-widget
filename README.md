@@ -1,6 +1,6 @@
 # React4j-Widget
 
-[![Build Status](https://secure.travis-ci.org/react4j/react4j-widget.png?branch=master)](http://travis-ci.org/react4j/react4j-widget)
+[![Build Status](https://secure.travis-ci.org/react4j/react4j-widget.svg?branch=master)](http://travis-ci.org/react4j/react4j-widget)
 [<img src="https://img.shields.io/maven-central/v/org.realityforge.react4j.widget/react4j-widget.svg?label=latest%20release"/>](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.realityforge.react4j.widget%22)
 
 This library provides a GWT widget that renders a React4j element.
