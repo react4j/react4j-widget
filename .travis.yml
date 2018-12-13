@@ -3,23 +3,10 @@ jdk:
 - oraclejdk8
 rvm:
 - 2.3.1
-before_install:
-- openssl aes-256-cbc -K $encrypted_c67e65222272_key -iv $encrypted_c67e65222272_iv
-  -in etc/secrets -out ../secrets.tar -d
-- "(cd ../ && tar xvf secrets.tar)"
-- chmod 600 ../deploy
-- eval `ssh-agent -s` && ssh-add ../deploy
-- chmod 600 ../release.asc
-- gpg --import ../release.asc
 install:
 - rvm use 2.3.1
 - gem install bundler
 - bundle install
-script: buildr package mcrt:publish_if_tagged site:publish_if_tagged
+script: buildr package
 git:
   depth: false
-env:
-  global:
-  - secure: gyahLomwn50zvpbqCo61pgJaYzDrdTWIOVR7IjAWPsN5VMWPuAzTo6bHlSyvvI5a1giZj6pghRK2g3cvBzesd6iYRkHi9h92GnUn7Iql1Oizj3JkI3SSiWJVj8tYW7AcUPB2/Ieml65AMJhZV8qBcS+eeD5H+BCBD4Wj4fVjPOwhZahtHL/3O/ABg55tP+7DRWIi/6c5A0/igowxrVmY2k++p5wDT5B9CLmS0bsRq6Sugi1eE0y0XTNnyYPnX7qd8yX251RnwlzuCB/QYdv93t42k9FR+JEsSoWCkc/i7TL5ZgIhnk/ENp+Edb33gJisWVVuOyk1BNJMcsRPqlTZTBHfBYWTi0PDFRRU9OueDeUvAcqzUTtCViz4qLsU1XP156Qz2Xd1A91cLzVwKk9LNOjp3bKjlzB3Zmu35IzSJiLm+g8CYGUWo6HW/dlddAu1EQ8WQsUslwDKAawbA7XUG+mILYJXgASo7Iv4GsdC6p+jmN4UgmB1k+6IWIKg3k6XF/G3FVqAq9f8PizDg1MWZT0SbclyJAsvdEtI2mARNhMEk8dHfppcYJ1kJWw1av/TtHscq/3b1Y9rR/3hrys8ERvsX2g4Dq4Wi7ARRg/x0kEnBDNqQLxb1QeyIPsrbRLs6oi2k2EatF3gViNSjFreopR7scm5GZ9FVj16WbAjXPo=
-  - secure: cbtVz4Hrhj7T5jVowkFMeOkkKVqGcY6EEgp7n7j5scnlb2W1jJPdZ+jC/U4VuZeosoVIcJBC2YjpOj7dQne/Gxhz2tTnAelS/XPpryAyiFuJk+phN1dxDs0ersc0NG67B7sKAv0t7hBr41UtWeVezWPz7LPl5CWSw1KpADXq8qemC2a4RkWVNMmnrOfoFkZMrpHCyt3XkCu8mbNQn9hAJQDLViLl0l9IlkG+Y2rrVyHHFab4a0buHURzEYfoCWzVja4PkP0hMAMyJARL8ohs3tG9rCIIiPC0n+Pu/poEFJkQjKUCmGQkKPX4mktsU4W/6sGogLExrA1kH5YqJhpsYsTUuCLNrLOmmT/nWvprmnxLjpzQk5J6SOH/pBf9Xnb84QbSd1zjPPFXhQDQGM1aKeYhEQ3tnsjxr4e4menSimbCa+0s0mfpLBIqeIg7Og/vyGNjnQz0ZyFlllmTTE84x+REv7b765elwb1INh3ZTh5iwFzwR1xM6P6UI56HUkF3A7lQm/2p3tg5lOG7TNRTvV/ovxzhyY9h61x1PODO7l5cZHjiK02LM3g7jmBzeS6GO/L2WNW06PG1mCCap1Puee6AQR2ad9wJyTsEV9OVgQZNn8StBWrNEwVYIctw+onSBY7XJAv2GkjwBSnb8MtbXk5ogD2GRRXmyYIzCxZZpSQ=
-  - secure: CSOnrIGnnE/FAzksa8g61oETuD1O8pBcDjTjs2OWXidTHFOpb+/72D5E29x1MZ38i4UT5nNMSzJY3JIoHH1o4xzM51RIlyoKC4VOBfvZcBkFFg775/3W937WsbC9bXVozpNlbUt8jBqU88bwWbfhNnPfmkCdYlFmiMNCGlk1qK694orq0Rz/6t3YezBnNZBIR03cRyWAyVPntYZ6hekZLhqh/Mq5IgRy1tmiMVelMGrjpTS/Xs5MUkIV9NtqlCMQqGECFD1tGVE0t98CxdtGXns22h0QnaHRXg+skzaR7Ql79ta3+j/puhjuX0VqHSdd0z+56Pfuf2Q2pSRaeEn5ez/F/BUgefSj4zjCyx06o/SqB/H68quVQp6ZGycS4Gq2G5j93h2tioV2MomqwLgs3qEyE7est0e9grjixOpHeQ2y9qeNCUGP2iPus2Sfp74OA5mTsjiVpQnFXRRgLMYzKh8BJTAmNbdVavFDR0pNq7NXe8oDKidqO+HB8H8gJm1qTseauROjD7OXzxBicNq2uSs+gs+9iAaS66JxSEkggaYAmTFCETYX5Zb+PfflGhX4NyG5vu5en2rt4gUeEq/hnOV/5/w9Ji7xHxavzK4M0/UBtY/4abtQKSl6EwDQXBrT3I4Pe3TPzL5JW/uh67+YzqEIOsrtVTBrdnmQku2SsNM=
