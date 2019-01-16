@@ -1,6 +1,7 @@
 # Change Log
 
-### Unreleased
+### [v1.53](https://github.com/react4j/react4j-widget/tree/v1.53) (2019-01-16)
+[Full Changelog](https://github.com/react4j/react4j-widget/compare/v1.52...v1.53)
 
 * Update the 'org.realityforge.react4j' dependencies to version '0.109'
 * Remove deployment from TravisCI infrastructure as it is no longer feasible.
